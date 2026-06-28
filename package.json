@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "web | FOSSLingo web client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,12 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "i": "^0.3.7",
+    "motion": "^12.42.0",
     "next": "16.2.9",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-feather": "^2.0.10"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
