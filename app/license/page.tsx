@@ -77,24 +77,6 @@ export default function Home() {
           </motion.div>
         </section>
         <hr className='border-neutral-800'/>
-        <section className="flex flex-col justify-center items-center min-h-[40vh]">
-          <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-12 md:flex-row md:px-12 lg:px-20">
-            <div className="w-48 md:w-64 lg:w-80 flex-shrink-0">
-              <Image
-                src="https://i0.wp.com/opensource.org/wp-content/uploads/2009/08/osi_greyscale_for_use_on_dark_backgrounds_logo_0.png"
-                alt="Open Source Initative Logo"
-                width={320}
-                height={384}
-              />
-            </div>
-            <p className="max-w-2xl text-lg md:text-xl">
-              FOSSLingo is an alternative to traditional language learning apps
-              that is Private, Community Maintained, and Open-Source under the AGPLv3 License.
-              I, iddu01, started this project, simply because I think language learning
-              should be free for all.
-            </p>
-          </div>
-        </section>
       </main>
     </>
   )
