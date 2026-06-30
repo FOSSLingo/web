@@ -31,52 +31,39 @@ export default function Home() {
       {/* <hr style={{ color: '#2C2C2C' }}/> */}
       <hr className='border-neutral-800'/>
       <main>
-        <section className="flex min-h-[50vh] flex-col items-center justify-center px-6 text-center">
-          <motion.div 
-            className='text'
-            animate={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="max-w-4xl text-4xl font-bold md:text-5xl lg:text-6xl">
-              A free, open source alternative to Language Learning apps
-            </h1>
-            <div /* Container for the buttons, holy crap there are a lot of divs */
-              className='flex flex-col sm:flex-row gap-5 pt-6 items-center justify-center'
-            > 
-              <motion.button /* Get Started Button */
-                className='text-black bg-white rounded-xl p-2 border'
-                whileHover={{ scale: 1.1 }}
-              >
-                <Link 
-                  href="https://github.com/FOSSLingo/"
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className={`${roboto.className, "button"} flex items-center gap-1 text-xl`}>
-                    GitHub
-                  <Icon.GitHub size={30}/>
-                </Link>
-              </motion.button> {/* GitHub Button */}
-              
-              <motion.button /* Get Started Button */
-                className='text-white bg-black rounded-xl p-2 border'
-                whileHover={{ scale: 1.1 }}
-              >
-                <Link 
-                  href="https://github.com/FOSSLingo/"
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className={`${roboto.className, "button"} flex items-center gap-1 text-xl`}>
-                    Get started
-                  <Icon.ArrowRight size={30}/>
-                </Link>
-              </motion.button> {/* Get Started Button */}
-
-              
-            </div>
-          </motion.div>
+        <section className="flex min-h-[30vh] flex-col items-center justify-center px-6 text-center">
+          <h1 className="max-w-4xl text-4xl font-bold md:text-5xl lg:text-6xl">
+            License
+          </h1>
         </section>
         <hr className='border-neutral-800'/>
+        <section className="flex min-h-[30vh] flex-col items-center justify-center p-6">
+          <div className='text-center'>
+            <p className="max-w-2xl text-lg md:text-xl">
+              The FOSSLingo website, clients, and backend are licensed under the copyleft GNU Affero General Public License v3.0 (AGPL-3.0).<br /><br />
+              But, what does this mean?<br /><br />
+            </p>
+          </div>
+          <p className="max-w-2xl text-lg md:text-xl space-y-6">
+            1. If you modify any FOSSLingo <strong>software</strong> and host it for others to use, you must redistribute the modified source code.<br />
+            2. The modified source code <strong>must</strong> be released under the same license as the original code, AGPL-3.0.<br/>
+            3. You must preserve the original copyright notices, include the AGPL-3.0 license, and make the corresponding source code available to users of your modified version.
+          </p>
+          <div className='text-center'>
+            <p className="max-w-2xl text-lg md:text-xl pt-6">
+              <mark className='bg-white p-'>Alternatively, the FOSSLingo language resources (grammar explanations, lessons, vocabulary, and other educational content)
+              are licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) unless otherwise noted. This means:</mark><br/><br/>
+            </p>
+          </div>
+          <p className="max-w-2xl text-lg md:text-xl space-y-6">
+            1. Attribution (The BY part): In this case, You must provide appropriate attribution to the original author, include a link to the CC BY-SA 4.0 license, and indicate whether changes were made.<br />
+            2. If you modify, remix, or transform the original resources, you <strong>must</strong> release the modifications under the same license.
+          </p>
+        </section>
+        <hr className='border-neutral-800'/>
+        <section className="flex min-h-[30vh] flex-col items-center justify-center p-6">
+          <p>Note: This is not legal advice! This is a very big simplification of the licenses used.</p>
+        </section>
       </main>
     </>
   )
