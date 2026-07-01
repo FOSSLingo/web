@@ -9,16 +9,19 @@ function wipPopup() {
 }
 
 export const Footer = () => {
-  return ( 
-    <section className='flex items-center justify-between px-15 sm:px-25 md:px-50 lg:px-75 xl:px-200 h-32'>
-      <div>
-        <p>FOSSLingo is maintained by volunteers.</p>
+  return (
+    <div>
+      <hr className='border-neutral-800'/> 
+      <div className='flex items-center justify-between px-15 sm:px-25 md:px-50 lg:px-75 xl:px-200 h-32'>
+        <div>
+          <p>FOSSLingo is maintained by volunteers.</p>
+        </div>
+        <div className='flex flex-row justify-center items-center gap-5'>
+          <Link href="" onClick={wipPopup}><SiBluesky/></Link>
+          <Link href="https://github.com/FOSSLingo"><SiGithub/></Link>
+          <Link href="" onClick={wipPopup}><FeatherIcons.Globe/></Link>
+        </div>
       </div>
-      <div className='flex flex-row justify-center items-center gap-5'>
-        <Link href="" onClick={wipPopup}><SiBluesky/></Link>
-        <Link href="https://github.com/FOSSLingo"><SiGithub/></Link>
-        <Link href="" onClick={wipPopup}><FeatherIcons.Globe/></Link>
-      </div>
-    </section>
+    </div>
   )
 }

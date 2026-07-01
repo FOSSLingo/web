@@ -1,10 +1,8 @@
 "use client"
 
 import * as FeatherIcons from 'react-feather';
-import { SiBluesky, SiGithub } from '@icons-pack/react-simple-icons';
 import Link from "next/link";
 import Image from 'next/image';
-import React from 'react'
 import { Roboto } from 'next/font/google';
 import { motion } from "motion/react";
 
@@ -83,7 +81,7 @@ export default function Home() {
         <section className="flex flex-col justify-center items-center min-h-[40vh]">
           <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-12 md:flex-row md:px-12 lg:px-20">
             <div className="w-48 md:w-64 lg:w-80 flex-shrink-0">
-              <Link href="https://opensource.org/">
+              <Link href="https://opensource.org/" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="https://i0.wp.com/opensource.org/wp-content/uploads/2009/08/osi_greyscale_for_use_on_dark_backgrounds_logo_0.png"
                   alt="Open Source Initative Logo"
@@ -99,7 +97,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <hr className='border-neutral-800'/>
         <Footer/>
       </main>
     </>

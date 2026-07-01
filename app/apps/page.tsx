@@ -1,11 +1,9 @@
 "use client"
 
-import * as FeatherIcons from 'react-feather';
 import Link from "next/link"
-import Image from 'next/image';
 import { Roboto } from 'next/font/google';
-import React from 'react';
-import { motion } from "motion/react"
+import { Footer } from '@/src/components/footer';
+import { SiApple, SiAndroid, SiLinux, SiMacos } from '@icons-pack/react-simple-icons';
 
 const roboto = Roboto({
   subsets: ['latin']
@@ -33,19 +31,38 @@ export default function Apps() {
       <main>
         <section className="flex min-h-[10vh] sm:min-h-[40vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center px-6 text-center">
           <h1 className="max-w-4xl text-4xl font-bold md:text-5xl lg:text-6xl">
-            License
+            Apps
           </h1>
         </section>
         <hr className='border-neutral-800'/>
+        <section className='flex flex-col items-center justify-center px-6 py-6 text-center gap-6'>
+          
+          <div className='w-100 h-50 bg-[#0f0f0f] rounded-[40] items-center flex pl-5'>
+            <Link href="https://www.apple.com/os/ios/" target="_blank" rel="noopener noreferrer">
+              <SiApple size={40}/>
+            </Link>
+          </div>
         
-        <hr className='border-neutral-800'/>
-        <section className="flex sm:min-h-[30vh] md:min-h-[20vh] lg:min-h-[10vh] xl:min-h-[0vh] flex-col items-center justify-center p-6">
-          <p>Note: This is not legal advice! This is a very big simplification of the licenses used.<br />
-          The full licenses can be found here (Hyperlinks):&nbsp;
-          <Link href="https://choosealicense.com/licenses/cc-by-4.0/">CC BY-SA 4.0</Link>, and&nbsp;
-          <Link href="https://choosealicense.com/licenses/agpl-3.0/">AGPL-3.0</Link>
-          </p>
+          <div className='w-100 h-50 bg-[#0f0f0f] rounded-[40] items-center flex pl-5'>
+            <Link href="https://www.android.com/" target="_blank" rel="noopener noreferrer">
+              <SiAndroid size={40}/>
+            </Link>
+          </div>
+      
+          <div className='w-100 h-50 bg-[#0f0f0f] rounded-[40] items-center flex pl-5'>
+            <Link href="https://www.linux.org/" target="_blank" rel="noopener noreferrer">
+              <SiLinux size={40}/>
+            </Link>
+          </div>
+          
+          <div className='w-100 h-50 bg-[#0f0f0f] rounded-[40] items-center flex pl-5'>
+            <Link href="https://www.apple.com/os/macos/" target="_blank" rel="noopener noreferrer">
+              <SiMacos size={40}/>
+            </Link>
+          </div>
+          
         </section>
+        <Footer/>
       </main>
     </>
   )
