@@ -1,11 +1,14 @@
 "use client"
 
-import * as Icon from 'react-feather';
-import Link from "next/link"
+import * as FeatherIcons from 'react-feather';
+import { SiBluesky, SiGithub } from '@icons-pack/react-simple-icons';
+import Link from "next/link";
 import Image from 'next/image';
+import React from 'react'
 import { Roboto } from 'next/font/google';
-import React from 'react';
-import { motion } from "motion/react"
+import { motion } from "motion/react";
+
+import { Footer } from "@/src/components/footer"
 
 const roboto = Roboto({
   subsets: ['latin']
@@ -54,7 +57,7 @@ export default function Home() {
                   rel="noopener noreferrer" 
                   className={`${roboto.className, "button"} flex items-center gap-1 text-xl`}>
                     GitHub
-                  <Icon.GitHub size={30}/>
+                  <FeatherIcons.GitHub size={30}/>
                 </Link>
               </motion.button> {/* GitHub Button */}
               
@@ -67,8 +70,8 @@ export default function Home() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className={`${roboto.className, "button"} flex items-center gap-1 text-xl`}>
-                    Get started
-                  <Icon.ArrowRight size={30}/>
+                    Get Started
+                  <FeatherIcons.ArrowRight size={30}/>
                 </Link>
               </motion.button> {/* Get Started Button */}
 
@@ -80,21 +83,24 @@ export default function Home() {
         <section className="flex flex-col justify-center items-center min-h-[40vh]">
           <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-12 md:flex-row md:px-12 lg:px-20">
             <div className="w-48 md:w-64 lg:w-80 flex-shrink-0">
-              <Image
-                src="https://i0.wp.com/opensource.org/wp-content/uploads/2009/08/osi_greyscale_for_use_on_dark_backgrounds_logo_0.png"
-                alt="Open Source Initative Logo"
-                width={320}
-                height={384}
-              />
+              <Link href="https://opensource.org/">
+                <Image
+                  src="https://i0.wp.com/opensource.org/wp-content/uploads/2009/08/osi_greyscale_for_use_on_dark_backgrounds_logo_0.png"
+                  alt="Open Source Initative Logo"
+                  width={320}
+                  height={384}
+                />
+              </Link>
             </div>
             <p className="max-w-2xl text-lg md:text-xl">
-              FOSSLingo is an alternative to traditional language learning apps
-              that is Private, Community Maintained, and Open-Source under the AGPLv3 License.
-              I, iddu01, started this project, simply because I think language learning
-              should be free for all.
+              FOSSLingo is an alternative to traditional language learning apps that is Private, 
+              Community Maintained, and Open-Source under the AGPLv3 License. I, iddu01, started 
+              this project, simply because I think language learning should be free for all.
             </p>
           </div>
         </section>
+        <hr className='border-neutral-800'/>
+        <Footer/>
       </main>
     </>
   )
