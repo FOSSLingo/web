@@ -1,8 +1,6 @@
 import * as FeatherIcons from 'react-feather';
 import { SiBluesky, SiGithub } from '@icons-pack/react-simple-icons';
 import Link from "next/link";
-import Image from 'next/image';
-import React from 'react'
 
 function wipPopup() {
   alert("The FOSSLingo Bluesky account and website are a work in progress. Stay tuned!")
@@ -10,7 +8,7 @@ function wipPopup() {
 
 export const Footer = () => {
   return (
-    <div>
+    <main>
       <hr className='border-neutral-800'/> 
       <div className='flex items-center justify-between px-15 sm:px-25 md:px-50 lg:px-75 xl:px-200 h-32'>
         <div>
@@ -22,6 +20,6 @@ export const Footer = () => {
           <Link href="" onClick={wipPopup}><FeatherIcons.Globe/></Link>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
