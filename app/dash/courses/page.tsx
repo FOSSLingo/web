@@ -1,10 +1,16 @@
 import { VerticalBr } from "@/src/components/verticalBr"
 import * as FeatherIcons from 'react-feather';
 import Link from "next/link";
+import { CourseIcon } from "@/src/components/courseIcon";
+import { promises as fs } from 'fs';
+import spanishFlag from '@/public/es.svg'
 
-export default function Dash() {
+export default async function Dash() {
+  const serverUrl = process.env.NEXT_PUBLIC_BACKEND_URL
+  const response = await fetch(serverUrl!);
+  const index = await response.json()
   return (
-    <main>
+    <div className="flex">
       <div className="flex items-center"> {/* Side navbar */}
         <div className="flex flex-col p-5 gap-5">
           <Link href="/dash">
@@ -40,7 +46,15 @@ export default function Dash() {
         </div> 
         <VerticalBr/>
       </div> {/* End of Side navbar */}
-
-    </main>
+      <main className="flex-1">
+        <div className="flex flex-row justify-center py-10 lg:py-20 xl:py-20">
+          <h1 className="font-bold text-4xl">Courses</h1>
+        </div>
+        <hr className='border-neutral-800'/>
+        <div className="flex gap-4 p-6">
+          <CourseIcon courseID="0" alt="hi"/>
+        </div>
+      </main>
+    </div>
   )
 }

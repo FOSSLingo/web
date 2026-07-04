@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Dash() {
   return (
-    <main>
+    <div className="flex">
       <div className="flex items-center">
         <div className="flex flex-col p-5 gap-5">
           <Link href="/dash">
@@ -40,6 +40,9 @@ export default function Dash() {
         </div>
         <VerticalBr/>
       </div>
-    </main>
+      <main>
+        
+      </main>
+    </div>
   )
 }
