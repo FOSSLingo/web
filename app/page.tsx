@@ -50,8 +50,7 @@ export default function Home() {
                 whileHover={{ scale: 1.1 }}
               >
                 <Link 
-                  href="https://github.com/FOSSLingo/"
-                  target="_blank" 
+                  href="dash/"
                   rel="noopener noreferrer" 
                   className={`${roboto.className, "button"} flex items-center gap-1 text-xl`}>
                     Get Started
