@@ -7,8 +7,11 @@ import spanishFlag from '@/public/es.svg'
 
 export default async function Dash() {
   const serverUrl = process.env.NEXT_PUBLIC_BACKEND_URL
-  const response = await fetch(serverUrl!);
+  const response = await fetch(serverUrl!, {
+    cache: "no-store"
+  });
   const index = await response.json()
+
   return (
     <div className="flex">
       <div className="flex items-center"> {/* Side navbar */}
@@ -52,7 +55,16 @@ export default async function Dash() {
         </div>
         <hr className='border-neutral-800'/>
         <div className="flex gap-4 p-6">
-          <CourseIcon courseID="0" alt="hi"/>
+          {/* tbh idk what course: any does but when 
+          i try to delete it next gives an error,
+          ill just leave it i guess */}
+          {index.map((course: any, i: number) => (
+            <CourseIcon
+              key={i}
+              courseID={i.toString()}
+              alt={'Course Flag'}
+            />
+          ))}
         </div>
       </main>
     </div>
