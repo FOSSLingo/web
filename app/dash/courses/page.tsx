@@ -7,14 +7,12 @@ import spanishFlag from '@/public/es.svg'
 
 export default async function Dash() {
   const serverUrl = process.env.NEXT_PUBLIC_BACKEND_URL
-  const response = await fetch(serverUrl!, {
-    cache: "no-store"
-  });
+  const response = await fetch(serverUrl!, { cache: "no-store" });
   const index = await response.json()
 
   return (
     <div className="flex">
-      <div className="flex items-center"> {/* Side navbar */}
+      <div className="flex items-center"> {/* side navbar */}
         <div className="flex flex-col p-5 gap-5">
           <Link href="/dash">
             <div className="p-2 rounded-2xl">
@@ -48,7 +46,7 @@ export default async function Dash() {
           </Link>
         </div> 
         <VerticalBr/>
-      </div> {/* End of Side navbar */}
+      </div> {/* end of side navbar */}
       <main className="flex-1">
         <div className="flex flex-row justify-center py-10 lg:py-20 xl:py-20">
           <h1 className="font-bold text-4xl">Courses</h1>
