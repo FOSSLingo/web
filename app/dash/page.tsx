@@ -1,8 +1,16 @@
 import { VerticalBr } from "@/src/components/verticalBr"
+import { LessonCard } from "@/src/components/lessonCard";
 import * as FeatherIcons from 'react-feather';
 import Link from "next/link";
 
-export default function Dash() {
+export default async function Dash({
+  searchParams,
+}: {
+  searchParams: Promise<{ courseId?: string }>
+}) {
+  const { courseId } = await searchParams;
+  console.log(courseId)
+  
   return (
     <div className="flex">
       <div className="flex items-center">
@@ -40,8 +48,14 @@ export default function Dash() {
         </div>
         <VerticalBr/>
       </div>
-      <main>
-        
+      <main className="flex-1">
+        <div className="flex flex-row justify-center py-10 lg:py-20 xl:py-20">
+          <h1 className="font-bold text-4xl">Learn</h1>
+        </div>
+        <hr className='border-neutral-800'/>
+        <div className="grid grid-cols-2 gap-4 p-6">
+          <LessonCard courseID={courseId!}/>
+        </div>
       </main>
     </div>
   )
