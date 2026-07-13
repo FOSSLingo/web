@@ -53,9 +53,6 @@ export default async function Dash() {
         </div>
         <hr className='border-neutral-800'/>
         <div className="flex gap-4 p-6">
-          {/* tbh idk what course: any does but when 
-          i try to delete it next gives an error,
-          ill just leave it i guess */}
           {index.map((course: any, i: number) => (
             <CourseIcon
               key={i}

@@ -25,7 +25,7 @@ export const CourseIcon = ({ courseID, alt }: CourseIconProps) => {
       </div>
       <p className="font-bold">{index[courseID].name}</p>
       <div className="flex items-center justify-center bg-teal-400 w-15 h-5 rounded-lg">
-      <Link href={"/dash" + index[courseID].hrefTag}>
+      <Link href={"/dash" + index[courseID].courseHrefTag}>
           <p className="font-bold text-black">Learn!</p>
         </Link>
       </div>
