@@ -10,7 +10,13 @@ export default async function Dash({ searchParams }: { searchParams: Promise<{ c
   const response = await fetch(serverUrl!, { cache: "no-store" });
 
   const courses = await response.json();
-  const course = courses.find((c: any) => c.courseID === courseId);
+
+  console.log("courseId:", courseId);
+  console.log("courses:", courses);
+
+  const course = courses.find((c: any) => c.courseID === Number(courseId));
+
+  console.log("course:", course);
 
   // ofcourse cache: can be changed / removed if you want no caching for faster loading, but i reccomend no caching
   const courseResponse = await fetch(`${serverUrl}/resources${course.courseFolder}/index.json`, {cache: "no-store"});  
