@@ -2,7 +2,7 @@ import { VerticalBr } from "@/src/components/verticalBr"
 import * as FeatherIcons from 'react-feather';
 import Link from "next/link";
 
-export default function Dash() {
+export default function Settings() {
   return (
     <div className="flex">
       <div className="flex items-center">

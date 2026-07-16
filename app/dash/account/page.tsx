@@ -1,17 +1,22 @@
 import { VerticalBr } from "@/src/components/verticalBr"
 import * as FeatherIcons from 'react-feather';
 import Link from "next/link";
-import { CourseIcon } from "@/src/components/courseIcon";
-import { promises as fs } from 'fs';
 
-export default async function Dash() {
-  const serverUrl = process.env.NEXT_PUBLIC_BACKEND_URL
-  const response = await fetch(serverUrl!, { cache: "no-store" });
-  const index = await response.json()
+export default function Account() {
+  var quotes = // * Look, I got bored, ok?
+    [
+      "Bold of you to assume that I have implemented account functionality.", 
+      "Does this app even need an account function? What's the point?", 
+      "I'm too tired to add accounts, get me a coffee and I will.",
+      "Sorry, I ran out of Claude credits, accounts are now postponed. /j",
+      "Fork this repo and add accounts yourself!!",
+      "Hashing? What's that? I store credentials in plain JSON."
+    ]
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
   return (
     <div className="flex">
-      <div className="flex items-center"> {/* side navbar */}
+      <div className="flex items-center">
         <div className="flex flex-col p-5 gap-5">
           <Link href="/dash">
             <div className="p-2 rounded-2xl">
@@ -19,7 +24,7 @@ export default async function Dash() {
             </div>
           </Link>
           <Link href="/dash/courses">
-            <div className="bg-[#1F1F1F] p-2 rounded-2xl">
+            <div className="p-2 rounded-2xl">
               <FeatherIcons.Book className="sm:size-10 md:size-10"/>
             </div>
           </Link>
@@ -29,7 +34,7 @@ export default async function Dash() {
             </div>
           </Link>
           <Link href="/dash/account">
-            <div className="p-2 rounded-2xl">
+            <div className="bg-[#1F1F1F] p-2 rounded-2xl">
               <FeatherIcons.User className="sm:size-10 md:size-10"/>
             </div>
           </Link>
@@ -43,22 +48,18 @@ export default async function Dash() {
               <FeatherIcons.GitHub className="sm:size-10 md:size-10"/>
             </div>
           </Link>
-        </div> 
+        </div>
         <VerticalBr/>
-      </div> {/* end of side navbar */}
-      <main className="flex-1">
+      </div>
+      <main className="flex flex-col flex-1">
         <div className="flex flex-row justify-center py-10 lg:py-20 xl:py-20">
-          <h1 className="font-bold text-4xl">Courses</h1>
+          <h1 className="font-bold text-4xl">Account</h1>
         </div>
         <hr className='border-neutral-800'/>
-        <div className="flex gap-4 p-6">
-          {index.map((course: any, i: number) => (
-            <CourseIcon
-              key={i}
-              courseID={i.toString()}
-              alt={'Course Flag'}
-            />
-          ))}
+        <div className="flex-1 flex justify-center items-center">
+          <h1 className="font-bold text-5xl px-15">
+            {randomQuote}
+          </h1>
         </div>
       </main>
     </div>
