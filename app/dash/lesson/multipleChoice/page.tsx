@@ -1,3 +1,11 @@
-export default function multipleChoice() {
-  
+import multipleChoiceServer from '@/src/components/multipleChoiceServer'
+import MultipleChoice from '@/src/components/multipleChoice'
+
+import { parse, stringify } from 'yaml'
+import YAML from 'yaml'
+
+export default async function multipleChoice({ searchParams }: any) {
+  const data = await multipleChoiceServer({ searchParams })
+
+  return <MultipleChoice data={data}/>
 }

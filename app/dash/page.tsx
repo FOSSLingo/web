@@ -1,8 +1,8 @@
 import { VerticalBr } from "@/src/components/verticalBr"
 import { LessonCard } from "@/src/components/lessonCard";
-import * as FeatherIcons from 'react-feather';
 import Link from "next/link";
 import Navigation, { redirect } from "next/navigation"
+import * as FeatherIcons from 'react-feather';
 
 export default async function Dash({ searchParams }: { searchParams: Promise<{ courseId?: string }>}) {
   const { courseId } = await searchParams;

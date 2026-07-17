@@ -72,6 +72,7 @@ export default function Home() {
                   alt="Open Source Initative Logo"
                   width={320}
                   height={384}
+                  loading='eager'
                 />
               </Link>
             </div>
