@@ -1,8 +1,19 @@
+// TODO Note!
+// * The comments in this code 
+// ? are best viewed with the 
+// ! Better Comments Next VSCode extension
+
+// ? is used for explanations
+// * is used for notes
+// ! is used for alerts!
+// TODO is used for TODO's
+
 import { VerticalBr } from "@/src/components/verticalBr"
 import { LessonCard } from "@/src/components/lessonCard";
 import Link from "next/link";
 import Navigation, { redirect } from "next/navigation"
 import * as FeatherIcons from 'react-feather';
+import { Sidebar } from "@/src/components/sidebar";
 
 export default async function Dash({ searchParams }: { searchParams: Promise<{ courseId?: string }>}) {
   const { courseId } = await searchParams;
@@ -23,44 +34,7 @@ export default async function Dash({ searchParams }: { searchParams: Promise<{ c
 
   return (
     <div className="flex">
-      {/* Start of side navbar, will turn into component soon (<SideNavBar/>) */}
-      <div className="flex items-center">
-        <div className="flex flex-col p-5 gap-5">
-          <Link href="/dash">
-            <div className="bg-[#1F1F1F] p-2 rounded-2xl">
-              <FeatherIcons.Home className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-          <Link href="/dash/courses">
-            <div className="p-2 rounded-2xl">
-              <FeatherIcons.Book className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-          <Link href="/dash/leaderboard">
-            <div className="p-2 rounded-2xl">
-              <FeatherIcons.Award className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-          <Link href="/dash/account">
-            <div className="p-2 rounded-2xl">
-              <FeatherIcons.User className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-          <Link href="/dash/settings">
-            <div className="p-2 rounded-2xl">
-              <FeatherIcons.Settings className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-          <Link href="https://github.com/FOSSLingo">
-            <div className="p-2 rounded-2xl">
-              <FeatherIcons.GitHub className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-        </div>
-        <VerticalBr/>
-      </div>
-      {/* End of side navbar */}
-
+      <Sidebar highlitedIcon="dash"/> {/* * See?! I turned it into a reuseable component! */}
       <main className="flex-1">
         <div className="flex flex-row justify-center py-10 lg:py-20 xl:py-20">
 

@@ -1,6 +1,4 @@
-import { VerticalBr } from "@/src/components/verticalBr"
-import * as FeatherIcons from 'react-feather';
-import Link from "next/link";
+import { Sidebar } from "@/src/components/sidebar";
 
 export default function Account() {
   var quotes = // * Look, I got bored, ok?
@@ -16,48 +14,14 @@ export default function Account() {
 
   return (
     <div className="flex">
-      <div className="flex items-center">
-        <div className="flex flex-col p-5 gap-5">
-          <Link href="/dash">
-            <div className="p-2 rounded-2xl">
-              <FeatherIcons.Home className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-          <Link href="/dash/courses">
-            <div className="p-2 rounded-2xl">
-              <FeatherIcons.Book className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-          <Link href="/dash/leaderboard">
-            <div className="p-2 rounded-2xl">
-              <FeatherIcons.Award className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-          <Link href="/dash/account">
-            <div className="bg-[#1F1F1F] p-2 rounded-2xl">
-              <FeatherIcons.User className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-          <Link href="/dash/settings">
-            <div className="p-2 rounded-2xl">
-              <FeatherIcons.Settings className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-          <Link href="https://github.com/FOSSLingo">
-            <div className="p-2 rounded-2xl">
-              <FeatherIcons.GitHub className="sm:size-10 md:size-10"/>
-            </div>
-          </Link>
-        </div>
-        <VerticalBr/>
-      </div>
+      <Sidebar highlitedIcon="account"/>
       <main className="flex flex-col flex-1">
         <div className="flex flex-row justify-center py-10 lg:py-20 xl:py-20">
           <h1 className="font-bold text-4xl">Account</h1>
         </div>
         <hr className='border-neutral-800'/>
         <div className="flex-1 flex justify-center items-center">
-          <h1 className="font-bold text-5xl px-15">
+          <h1 className="text-center font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl px-4">
             {randomQuote}
           </h1>
         </div>

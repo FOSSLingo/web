@@ -1,7 +1,7 @@
 // TODO Note!
 // * The comments in this code 
 // ? are best viewed with the 
-// ! Better Comments VSCode extension
+// ! Better Comments Next VSCode extension
 
 // ? is used for explanations
 // * is used for notes
