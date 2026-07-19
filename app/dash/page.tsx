@@ -21,7 +21,6 @@ export default async function Dash({ searchParams }: { searchParams: Promise<{ c
   const response = await fetch(serverUrl!, { cache: "no-store" });
 
   if (!courseId) {
-    
     redirect("/dash/courses")
   }
 

@@ -1,3 +1,5 @@
+"use client"
+
 // TODO Note!
 // * The comments in this code 
 // ? are best viewed with the 
@@ -8,9 +10,9 @@
 // ! is used for alerts!
 // TODO is used for TODO's
 
-import { VerticalBr } from "./verticalBr"
 import Link from "next/link"
 import * as FeatherIcons from "react-feather"
+import { useTheme } from "next-themes"
 
 interface SidebarProps {
   highlitedIcon: string
@@ -21,13 +23,20 @@ interface SidebarProps {
 
 
 export const Sidebar = ({highlitedIcon}: SidebarProps) => {
+  // const { resolvedTheme, setTheme } = useTheme()
+  // let highlightColor = ""
+  // if (resolvedTheme === "dark") {
+  //   highlightColor = "bg-[#1F1F1F]"
+  // } else {
+  //   highlightColor = "bg-[#e3e3e3]"
+  // }
   return (
     <div className="flex items-center">
       <div className="flex flex-col p-5 gap-5">
         <Link href="/dash">
           <div className={`p-2 rounded-2xl
               ${highlitedIcon === "dash"
-                ? "bg-[#1F1F1F]"
+                ? 'dark:bg-[#1F1F1F] bg-[#e3e3e3]'
                 : ""
               }
             `}>
@@ -37,7 +46,7 @@ export const Sidebar = ({highlitedIcon}: SidebarProps) => {
         <Link href="/dash/courses">
           <div className={`p-2 rounded-2xl
               ${highlitedIcon === "courses"
-                ? "bg-[#1F1F1F]"
+                ? 'dark:bg-[#1F1F1F] bg-[#e3e3e3]'
                 : ""
               }
             `}>
@@ -47,7 +56,7 @@ export const Sidebar = ({highlitedIcon}: SidebarProps) => {
         <Link href="/dash/leaderboard">
           <div className={`p-2 rounded-2xl
               ${highlitedIcon === "leaderboard"
-                ? "bg-[#1F1F1F]"
+                ? 'dark:bg-[#1F1F1F] bg-[#e3e3e3]'
                 : ""
               }
             `}>
@@ -57,7 +66,7 @@ export const Sidebar = ({highlitedIcon}: SidebarProps) => {
         <Link href="/dash/account">
           <div className={`p-2 rounded-2xl
               ${highlitedIcon === "account"
-                ? "bg-[#1F1F1F]"
+                ? 'dark:bg-[#1F1F1F] bg-[#e3e3e3]'
                 : ""
               }
             `}>
@@ -67,7 +76,7 @@ export const Sidebar = ({highlitedIcon}: SidebarProps) => {
         <Link href="/dash/settings">
           <div className={`p-2 rounded-2xl
               ${highlitedIcon === "settings"
-                ? "bg-[#1F1F1F]"
+                ? 'dark:bg-[#1F1F1F] bg-[#e3e3e3]'
                 : ""
               }
             `}>

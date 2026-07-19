@@ -9,11 +9,14 @@ import { motion } from "motion/react";
 import { Footer } from "@/src/components/footer"
 import { NavBar } from '@/src/components/navbar';
 
+import { useTheme } from 'next-themes';
+
 const roboto = Roboto({
   subsets: ['latin']
 })
 
 export default function Home() {
+  const { resolvedTheme, setTheme } = useTheme()
   return (
     <>
       <NavBar/>
@@ -68,7 +71,11 @@ export default function Home() {
             <div className="w-48 md:w-64 lg:w-80 flex-shrink-0">
               <Link href="https://opensource.org/" target="_blank" rel="noopener noreferrer">
                 <Image
-                  src="https://i0.wp.com/opensource.org/wp-content/uploads/2009/08/osi_greyscale_for_use_on_dark_backgrounds_logo_0.png"
+                  src={
+                  resolvedTheme === "dark"
+                    ? "https://i0.wp.com/opensource.org/wp-content/uploads/2009/08/osi_black_and_white_dark_backgrounds_logo_0.png"
+                    : "https://i0.wp.com/opensource.org/wp-content/uploads/2009/08/osi_black_and_white_light_backgrounds_logo_0.png"
+                  }
                   alt="Open Source Initative Logo"
                   width={320}
                   height={384}

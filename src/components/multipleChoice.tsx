@@ -64,9 +64,9 @@ export default function MultipleChoice({ data }: any) {
                 onClick={() => setSelected(option.text)} 
                 className={`${
                   selected === option.text
-                    ? "bg-teal-400 text-black"
-                    : "bg-[#1f1f1f]"
-                } rounded-xl p-3 flex flex-col gap-5 items-center justify-center font-bold`
+                    ? "bg-teal-400 text-black border-teal-200"
+                    : "bg-[#e3e3e3] border-[#cccccc] dark:bg-[#0f0f0f] dark:border-[#1f1f1f]"
+                } rounded-xl p-3 flex flex-col gap-5 items-center justify-center font-bold border-2`
               } 
               >
                 {option.text}

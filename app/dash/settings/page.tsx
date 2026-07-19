@@ -1,3 +1,6 @@
+"use client"
+
+import { LightDarkModeToggle } from "@/src/components/lightDarkModeToggle"
 import { Sidebar } from "@/src/components/sidebar"
 export default function Settings() {
   return (
@@ -10,10 +13,9 @@ export default function Settings() {
         </div>
         <hr className='border-neutral-800'/>
 
-        <div className="flex gap-4 p-6">
-          
+        <div className="flex items-center gap-4 p-6">
+          <p className="font-bold">Theme:</p><LightDarkModeToggle/>
         </div>
-
       </main>
     </div>
   )

@@ -7,9 +7,6 @@ import Neutral from "@/public/neutral.svg"
 import X from "@/public/x.svg"
 import ProgressBar from "./progressBar";
 import { X as Cancel } from "react-feather";
-import Link from "next/link";
-
-
 
 export default function fillInTheBlanks({ data }: any) {
 
@@ -61,12 +58,12 @@ export default function fillInTheBlanks({ data }: any) {
             {question.options.map((option: string) => (
               <div 
                 key={option}
-                onClick={() => setSelected(option)} 
+                onClick={() => setSelected(option)}
                 className={`${
                   selected === option
-                    ? "bg-teal-400 text-black"
-                    : "bg-[#1f1f1f]"
-                } rounded-xl p-3`} 
+                    ? "bg-teal-400 text-black border-teal-200"
+                    : "bg-[#e3e3e3] border-[#cccccc] dark:bg-[#0f0f0f] dark:border-[#1f1f1f]"
+                } rounded-xl p-3 border-2`}
               >
                 {option}
               </div>
