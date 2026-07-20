@@ -32,7 +32,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        <NextTopLoader color="#FFFFFF"/>
+        <NextTopLoader 
+          color="#FFFFFF"
+          showSpinner={false}
+          shadow="0 0 10px #00d5be,0 0 5px #00d5be"
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
