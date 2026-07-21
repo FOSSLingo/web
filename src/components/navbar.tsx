@@ -3,10 +3,13 @@ import Image from "next/image";
 
 import { LightDarkModeToggle } from '@/src/components/lightDarkModeToggle';
 
+import { useTranslations } from "next-intl";
+
 import LightModeIcon from "@/public/FOSSLingoLightLogo.svg"
 import DarkModeIcon from "@/public/FOSSLingoDarkLogo.svg"
 
 export const NavBar = () => {
+  const t = useTranslations('NavBar')
   return (
     <main>
       <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 p-3"> {/* Top navbar*/}
@@ -17,24 +20,24 @@ export const NavBar = () => {
                 src={LightModeIcon}
                 width="50"
                 height="50"
-                alt="FOSSLingo Logo"
+                alt={t("fosslingoLogoAlt")}
                 className="block dark:hidden"
               />
               <Image
                 src={DarkModeIcon}
                 width="50"
                 height="50"
-                alt="FOSSLingo Logo"
+                alt={t("fosslingoLogoAlt")}
                 className="hidden dark:block"
             />
             </Link>
           </div>
-          <Link href="/courses">Courses</Link>
-          <Link href="/apps">Apps</Link>
-          <Link href="/mission">Our Mission</Link>
+          <Link href="/courses">{t("courses")}</Link>
+          <Link href="/apps">{t("apps")}</Link>
+          <Link href="/mission">{t("ourMission")}</Link>
         </div>
         <div className='flex items-center justify-end gap-2 sm:gap-4'> {/* Top navbar | Right side stuff */} 
-          <Link href="/license">License</Link>
+          <Link href="/license">{t("license")}</Link>
           <LightDarkModeToggle/>
         </div> {/* Top navbar | Right side stuff */}   
       </div> {/* Top navbar*/}

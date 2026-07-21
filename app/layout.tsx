@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import NextTopLoader from 'nextjs-toploader';
 import { ThemeProvider } from "@/components/theme-provider";
+import { NextIntlClientProvider } from "next-intl";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,7 +44,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <NextIntlClientProvider>
+            {children}
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -1,0 +1,54 @@
+{
+  "NavBar": {
+    "fosslingoLogoAlt": "FOSSLingo Logo",
+    "courses": "Courses",
+    "apps": "Apps",
+    "ourMission": "Our Mission",
+    "license": "License"
+  },
+  "Footer": {
+    "footerText": "FOSSLingo is maintained by volunteers."
+  },
+  "LandingPage": {
+    "title": "A free, open source alternative to Language Learning apps",
+    "description": "FOSSLingo is an alternative to traditional language learning apps that is Private, Community Maintained, and Open-Source under the AGPLv3 License. I, iddu01, started this project, simply because I think language learning should be free for all.",
+    "getStarted": "Get Started",
+    "osiLogoAlt": "Open Source Initative Logo"
+  },
+  "CoursesPage": {
+    "title": "Courses",
+    "notice": "FOSSLingo is a project, currently only maintained by one person. As such, there is currently only going to be one course: <strong>Spanish (Worldwide)</strong>. Once the project gains more attention, more languages can, and will be added down the road.",
+    "explanationTitle": "Why was Spanish chosen?",
+    "explanation": "Spanish was chosen as I have a friend that is fluent in Spanish (from a Spanish speaking country), as such it will be easy to make a Spanish course as the first course for FOSSLingo"
+  },
+  "AppsPage": {
+    "title": "Apps",
+    "descriptions": {
+      "NextJS": "The web client is coded in Next.js / React.js. Development has started, but no ETA has been finalized. If you are experienced in Next app development and would like to help, create a pull request at FOSSLingo/web!",
+      "iOS": "The iOS Client is planned to be coded in Swift. Development has not started, and no ETA has been finalized. If you are experienced in iOS app development, create a discussion",
+      "Android": "The Android Client is planned to be coded in the future. Development has not started, and no ETA has been finalized. If you are experienced in Android app development, create a discussion",
+      "Linux": "The Linux Client is planned to be coded in the future. Development has not started, and no ETA has been finalized. If you are experienced in Linux app development, create a discussion",
+      "macOS": "The macOS Client is planned to be coded in Swift. Development has not started, and no ETA has been finalized. If you are experienced in macOS app development, create a discussion",
+      "Windows": "The Windows Client is planned to be coded in the future. Development has not started, and no ETA has been finalized. If you are experienced in Windows app development, create a discussion"
+    },
+    "here": "here"
+  },
+  "LicensePage": {
+    "title": "License",
+    "explanation": "The FOSSLingo website, clients, and backend are licensed under the copyleft GNU Affero General Public License v3.0 (AGPL-3.0).",
+    "explanationQuestion": "But, what does this mean?",
+    "softwareQuestions": {
+      "1": "1. If you modify any FOSSLingo <strong>software</strong> and host it for others to use, you must redistribute the modified source code.",
+      "2": "2. The modified source code <strong>must</strong> be released under the same license as the original code, AGPL-3.0.",
+      "3": "3. You must preserve the original copyright notices, include the AGPL-3.0 license, and make the corresponding source code available to users of your modified version."
+    },
+    "alternatively": "Alternatively, the FOSSLingo language resources (grammar explanations, lessons, vocabulary, and other educational content) are licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) unless otherwise noted. This means:",
+    "resourcesQuestions": {
+      "1": "1. Attribution (The BY part): In this case, You must provide appropriate attribution to the original author, include a link to the CC BY-SA 4.0 license, and indicate whether changes were made.",
+      "2": "2. If you modify, remix, or transform the original resources, you <strong>must</strong> release the modifications under the same license."
+    },
+    "disclaimer": "Disclaimer: This is not legal advice! This is a very big simplification of the licenses used. The full licenses can be found here (Hyperlinks):",
+    "and": "and"
+  }
+
+}

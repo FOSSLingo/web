@@ -1,8 +1,10 @@
 "use client"
 
-import * as FeatherIcons from 'react-feather';
 import Link from "next/link";
 import Image from 'next/image';
+
+import * as FeatherIcons from 'react-feather';
+
 import { Roboto } from 'next/font/google';
 import { motion } from "motion/react";
 
@@ -11,12 +13,15 @@ import { NavBar } from '@/src/components/navbar';
 
 import { useTheme } from 'next-themes';
 
+import { useTranslations } from "next-intl";
+
 const roboto = Roboto({
   subsets: ['latin']
 })
 
 export default function Home() {
   const { resolvedTheme, setTheme } = useTheme()
+  const t = useTranslations('LandingPage')
   return (
     <>
       <NavBar/>
@@ -29,7 +34,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="max-w-4xl text-4xl font-bold md:text-5xl lg:text-6xl">
-              A free, open source alternative to Language Learning apps
+              {t('title')}
             </h1>
             <div /* Container for the buttons, holy crap there are a lot of divs */
               className='flex flex-col sm:flex-row gap-5 pt-6 items-center justify-center'
@@ -56,7 +61,7 @@ export default function Home() {
                   href="dash/"
                   rel="noopener noreferrer" 
                   className={`${roboto.className, "button"} flex items-center gap-1 text-xl`}>
-                    Get Started
+                    {t("getStarted")}
                   <FeatherIcons.ArrowRight size={30}/>
                 </Link>
               </motion.button> {/* Get Started Button */}
@@ -76,7 +81,7 @@ export default function Home() {
                     ? "https://i0.wp.com/opensource.org/wp-content/uploads/2009/08/osi_black_and_white_dark_backgrounds_logo_0.png"
                     : "https://i0.wp.com/opensource.org/wp-content/uploads/2009/08/osi_black_and_white_light_backgrounds_logo_0.png"
                   }
-                  alt="Open Source Initative Logo"
+                  alt={t("osiLogoAlt")}
                   width={320}
                   height={384}
                   loading='eager'
@@ -84,9 +89,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="max-w-2xl text-lg md:text-xl">
-              FOSSLingo is an alternative to traditional language learning apps that is Private, 
-              Community Maintained, and Open-Source under the AGPLv3 License. I, iddu01, started 
-              this project, simply because I think language learning should be free for all.
+              {t('description')}
             </p>
           </div>
         </section>
