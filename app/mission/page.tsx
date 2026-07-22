@@ -1,14 +1,18 @@
 "use client"
 
 import Link from "next/link"
-
+import { Roboto } from 'next/font/google';
 import { useTranslations } from "next-intl";
 
 import { Footer } from "@/src/components/footer";
 import { NavBar } from "@/src/components/navbar";
 
-export default function Credits() {
-  const t = useTranslations('CreditsPage')
+const roboto = Roboto({
+  subsets: ['latin']
+})
+
+export default function Mission() {
+  const t = useTranslations("MissionPage")
   return (
     <>
       <NavBar/>
@@ -19,8 +23,12 @@ export default function Credits() {
           </h1>
         </section>
         <hr className='border-neutral-800'/>
-        <section className="flex min-h-[30vh] flex-col items-center justify-center text-center p-6">
-          {t("creditsText")}
+        <section className="flex min-h-[10vh] sm:min-h-[40vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center p-6">
+          <div className='text-center'>
+            <p className="max-w-2xl text-lg md:text-xl">
+              {t("bodyText")}
+            </p>
+          </div>
         </section>
         <Footer/>
       </main>

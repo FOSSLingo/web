@@ -35,9 +35,13 @@
     },
     "here": "here"
   },
+  "MissionPage": {
+    "title": "Our Mission",
+    "bodyText": "FOSSLingo's mission is to make language learning free for all. I (iddu01) think that learning new things should be free for all. No exceptions. A human should not be limited on what they can learn based on their income, or money."
+  },
   "CreditsPage": {
     "title": "Credits",
-    "disclaimer": "This is not legal advice!"
+    "creditsText": "Credits for all libraries and tools used for FOSSLingo can be found in the GitHub repo 'FOSSLingo/web', under CREDITS.md"
   },
   "LicensePage": {
     "title": "License",
