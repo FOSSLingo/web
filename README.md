@@ -3,7 +3,7 @@
 ## What is FOSSLingo?
 FOSSLingo is an alternative to traditional language learning apps, designed to be free and open-source. I (iddu01) believe that education should be free for all, espically language learning. I originally made this as a project for Hackclub's Horizons.
 
-## Screenshots:
+## Screenshots;
 
 <img src="/screenshots/lessons-page.png" width="436" height="294" alt="Lessons Page">
 <img src="/screenshots/multiplechoice.png" width="436" height="294" alt="Multiple Choice Page">
@@ -11,7 +11,9 @@ FOSSLingo is an alternative to traditional language learning apps, designed to b
 <img src="/screenshots/fillintheblanks.png" width="436" height="294" alt="Fill Tn The Blanks Page">
 <img src="/screenshots/fillintheblanks-correctanswer.png" width="436" height="294" alt="Fill In The Blanks page with Correct Answer">
 
+## How to use;
 
+Currently, you can visit [this link](https://web-eight-ivory-84.vercel.app/) to demo FOSSLingo. Courses havent been added due to Horizon's due date, so this is currently a tech demo.
 
 ## Development;
 
