@@ -18,7 +18,7 @@ bun dev
 
 Open [`http://localhost:3000`](http://localhost:3000) with your browser to see the result.
 
-## Hosting on Vercel;
+### Hosting on Vercel;
 > [!IMPORTANT]  
 > If you haven't deployed the backend,
 > it is a good time to do that now.
@@ -35,5 +35,33 @@ Or, follow these instructions manually.
 3. Back on Vercel, Click on "Import Project"
 4. Select Import next to "web"
 5. Under Application Preset, select Next.js
-6. Click "Environment Variables", and add one named `NEXT_PUBLIC_BACKEND_URL` with the value of your backend URL.
+6. Click "Environment Variables", and add one named `NEXT_PUBLIC_BACKEND_URL` with the value of your [backend](https://github.com/FOSSLingo/backend) URL.
 5. Click Deploy, and Deployment should start with the latest Git Commit
+
+### Self hosting deploy
+
+If you would like to self host the frontend on your own machine, follow these instructions. 
+
+> [!TIP]
+> We don't cover port forwarding / exposing to the web,
+> but for that, we recommend `cloudflared`!
+
+This guide assumes you have `npm` and `git` installed on a Linux system.
+
+1. Clone this repo somewhere easy to access:
+
+```bash
+git clone https://github.com/FOSSLingo/web
+```
+
+2. cd into the cloned directory:
+
+```bash
+cd web
+```
+
+3. Start the production server:
+
+```bash
+npm run build && npm start
+```
