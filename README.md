@@ -31,6 +31,10 @@ bun dev
 
 Open [`http://localhost:3000`](http://localhost:3000) with your browser to see the result.
 
+## AI usage;
+
+I will be honest, I tried to not use AI in this project. Some AI was used to connect to the backend though. Some of the "connecting to backend logic" was from sites like [StackOverflow](https://stackoverflow.com) or [Reddit](https://www.reddit.com/) questions lol. All the frontend was done by me though.
+
 ### Hosting on Vercel;
 > [!IMPORTANT]  
 > If you haven't deployed the backend,
