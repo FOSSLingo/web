@@ -23,13 +23,6 @@ interface SidebarProps {
 
 
 export const Sidebar = ({highlitedIcon}: SidebarProps) => {
-  // const { resolvedTheme, setTheme } = useTheme()
-  // let highlightColor = ""
-  // if (resolvedTheme === "dark") {
-  //   highlightColor = "bg-[#1F1F1F]"
-  // } else {
-  //   highlightColor = "bg-[#e3e3e3]"
-  // }
   return (
     <div className="flex items-center">
       <div className="flex flex-col p-5 gap-5">
@@ -83,7 +76,7 @@ export const Sidebar = ({highlitedIcon}: SidebarProps) => {
             <FeatherIcons.Settings className="sm:size-10 md:size-10"/>
           </div>
         </Link>
-        <Link href="https://github.com/FOSSLingo">
+        <Link href="https://github.com/FOSSLingo" onClick={() => alert("Please leave some stars, and follow the GitHub organization!")}>
           <div className={`p-2 rounded-2xl`}>
             <FeatherIcons.GitHub className="sm:size-10 md:size-10"/>
           </div>

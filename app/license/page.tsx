@@ -41,7 +41,7 @@ export default function License() {
           </p>
           <div className='text-center'>
             <p className="max-w-2xl text-lg md:text-xl pt-6">
-              <mark className='bg-white p-'>{t("alternatively")}</mark><br/><br/>
+              <mark className='dark:bg-white dark:text-white bg-black text-white'>{t("alternatively")}</mark><br/><br/>
             </p>
           </div>
           <p className="max-w-2xl text-lg md:text-xl space-y-6">

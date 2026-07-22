@@ -37,6 +37,7 @@ export const NavBar = () => {
           <Link href="/mission">{t("ourMission")}</Link>
         </div>
         <div className='flex items-center justify-end gap-2 sm:gap-4'> {/* Top navbar | Right side stuff */} 
+          <Link href="/credits">{t("credits")}</Link>
           <Link href="/license">{t("license")}</Link>
           <LightDarkModeToggle/>
         </div> {/* Top navbar | Right side stuff */}   

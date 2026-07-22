@@ -12,6 +12,7 @@ import { Footer } from "@/src/components/footer"
 import { NavBar } from '@/src/components/navbar';
 
 import { useTheme } from 'next-themes';
+import { useState, useEffect } from "react";
 
 import { useTranslations } from "next-intl";
 
@@ -22,6 +23,11 @@ const roboto = Roboto({
 export default function Home() {
   const { resolvedTheme, setTheme } = useTheme()
   const t = useTranslations('LandingPage')
+  const [ loaded, setLoaded ] = useState(false)
+
+  useEffect(() => {
+    setLoaded(true)
+  })
   return (
     <>
       <NavBar/>
@@ -65,15 +71,14 @@ export default function Home() {
                   <FeatherIcons.ArrowRight size={30}/>
                 </Link>
               </motion.button> {/* Get Started Button */}
-
-              
             </div>
           </motion.div>
         </section>
         <hr className='border-neutral-800'/>
         <section className="flex flex-col justify-center items-center min-h-[40vh]">
           <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-12 md:flex-row md:px-12 lg:px-20">
-            <div className="w-48 md:w-64 lg:w-80 flex-shrink-0">
+            <div className="flex items-center w-48 md:w-64 lg:w-80 flex-shrink-0">
+              {loaded && ( // ? prevents that stupid hydration error like next i'm not thirsty
               <Link href="https://opensource.org/" target="_blank" rel="noopener noreferrer">
                 <Image
                   src={
@@ -87,9 +92,26 @@ export default function Home() {
                   loading='eager'
                 />
               </Link>
+            )}
             </div>
             <p className="max-w-2xl text-lg md:text-xl">
               {t('description')}
+            </p>
+          </div>
+        </section>
+        <hr className='border-neutral-800'/>
+        <section className="flex flex-col justify-center items-center min-h-[40vh]">
+          <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-12 md:flex-row md:px-12 lg:px-20">
+            <div className="flex items-center justify-center w-48 md:w-64 lg:w-80 flex-shrink-0">
+              <FeatherIcons.GitPullRequest size="215"/>
+            </div>
+            <p className="max-w-2xl text-lg md:text-xl">
+              {t('contributorsNotice')}&nbsp;
+              <mark className='dark:bg-white dark:text-black bg-black text-white'>
+                <Link href="mailto:aadit@iddu01.me?subject=Please%20help%20me%20with%20contributing%20to%20FOSSLingo!&body=Hello%20Aadit%2C%0A%0AI%20would%20like%20some%20help%20with%20contributing%20to%20FOSSLingo.%0A%0AThank%20you.%0A">
+                  aadit@iddu01.me
+                </Link>
+              </mark>
             </p>
           </div>
         </section>

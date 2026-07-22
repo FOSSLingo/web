@@ -4,6 +4,7 @@
     "courses": "Courses",
     "apps": "Apps",
     "ourMission": "Our Mission",
+    "credits": "Credits",
     "license": "License"
   },
   "Footer": {
@@ -11,9 +12,10 @@
   },
   "LandingPage": {
     "title": "A free, open source alternative to Language Learning apps",
+    "osiLogoAlt": "Open Source Initative Logo",
     "description": "FOSSLingo is an alternative to traditional language learning apps that is Private, Community Maintained, and Open-Source under the AGPLv3 License. I, iddu01, started this project, simply because I think language learning should be free for all.",
     "getStarted": "Get Started",
-    "osiLogoAlt": "Open Source Initative Logo"
+    "contributorsNotice": "If you are a developer, UI/UX designer, artist, able to contribute voice samples, fluent in any language, or anything like that, please contribute to FOSSLingo! Even if you have never contributed to Open-Source, I'm here to help! You can reach out at"
   },
   "CoursesPage": {
     "title": "Courses",
@@ -32,6 +34,10 @@
       "Windows": "The Windows Client is planned to be coded in the future. Development has not started, and no ETA has been finalized. If you are experienced in Windows app development, create a discussion"
     },
     "here": "here"
+  },
+  "CreditsPage": {
+    "title": "Credits",
+    "disclaimer": "This is not legal advice!"
   },
   "LicensePage": {
     "title": "License",
