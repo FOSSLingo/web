@@ -1,6 +1,19 @@
 # FOSSLingo web client
 
-This is a NextJS app made with `create-next-app`. It is made as the main client for FOSSLingo.
+## What is FOSSLingo?
+FOSSLingo is an alternative to traditional language learning apps, designed to be free and open-source. I (iddu01) believe that education should be free for all, espically language learning. I originally made this as a project for Hackclub's Horizons.
+
+## Screenshots:
+
+See `SCREENSHOTS.md` for all screenshots;
+
+<img src="/screenshots/lessons-page.png" width="436" height="294" alt="Lessons Page">
+<img src="/screenshots/multiplechoice.png" width="436" height="294" alt="Multiple Choice Page">
+<img src="/screenshots/multiplechoice-correctanswer.png" width="436" height="294" alt="Multiple Choice Page with Correct Answer">
+<img src="/screenshots/fillintheblanks.png" width="436" height="294" alt="Fill Tn The Blanks Page">
+<img src="/screenshots/fillintheblanks-correctanswer.png" width="436" height="294" alt="Fill In The Blanks page with Correct Answer">
+
+
 
 ## Development;
 
@@ -65,3 +78,5 @@ cd web
 ```bash
 npm run build && npm start
 ```
+---
+This is a NextJS app made with `create-next-app`. It is made as the main client for FOSSLingo.
