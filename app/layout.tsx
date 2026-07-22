@@ -21,9 +21,6 @@ export const metadata: Metadata = {
   description: "A free, open source alternative to Language Learning apps",
 };
 
-function wipPopup() { //? dont know why this is HERE, but i'll leave it i guess
-  alert("The FOSSLingo Bluesky account and website are a work in progress. Stay tuned!")
-}
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (

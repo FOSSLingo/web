@@ -4,7 +4,11 @@ import Link from "next/link";
 import { useTranslations } from 'next-intl';
 
 function wipPopup() {
-  alert("The FOSSLingo Bluesky account and website are a work in progress. Stay tuned!")
+  alert("The FOSSLingo Bluesky account is a work in progress. Stay tuned!")
+}
+
+function domainNotice() {
+  alert("This website's domain will probably change once I buy a domain for FOSSLingo!")
 }
 
 export const Footer = () => {
@@ -19,7 +23,7 @@ export const Footer = () => {
         <div className='flex flex-row justify-center items-center gap-5'>
           <Link href="" onClick={wipPopup}><SiBluesky/></Link>
           <Link href="https://github.com/FOSSLingo"><SiGithub/></Link>
-          <Link href="" onClick={wipPopup}><FeatherIcons.Globe/></Link>
+          <Link href="https://web-eight-ivory-84.vercel.app/" onClick={domainNotice}><FeatherIcons.Globe/></Link>
         </div>
       </div>
     </main>
