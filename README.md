@@ -5,8 +5,6 @@ FOSSLingo is an alternative to traditional language learning apps, designed to b
 
 ## Screenshots:
 
-See `SCREENSHOTS.md` for all screenshots;
-
 <img src="/screenshots/lessons-page.png" width="436" height="294" alt="Lessons Page">
 <img src="/screenshots/multiplechoice.png" width="436" height="294" alt="Multiple Choice Page">
 <img src="/screenshots/multiplechoice-correctanswer.png" width="436" height="294" alt="Multiple Choice Page with Correct Answer">
