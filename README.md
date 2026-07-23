@@ -1,5 +1,12 @@
 # FOSSLingo web client
 
+## HACKCLUB! This repo depends on other repos!!
+
+https://github.com/FOSSLingo/backend, and<br>
+https://github.com/FOSSLingo/resources
+
+Thanks!
+
 ## What is FOSSLingo?
 FOSSLingo is an alternative to traditional language learning apps, designed to be free and open-source. I (iddu01) believe that education should be free for all, espically language learning. I originally made this as a project for Hackclub's Horizons.
 
