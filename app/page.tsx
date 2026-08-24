@@ -45,7 +45,7 @@ export default function Home() {
             <div /* Container for the buttons, holy crap there are a lot of divs */
               className='flex flex-col sm:flex-row gap-5 pt-6 items-center justify-center'
             > 
-              <motion.button /* Get Started Button */
+              <motion.button /* GitHub Button */
                 className='text-black bg-white rounded-xl p-2 border'
                 whileHover={{ scale: 1.1 }}
               >
