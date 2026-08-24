@@ -14,6 +14,7 @@ import { redirect } from "next/navigation"
 
 import { LessonCard } from "@/src/components/ui/lessonCard";
 import { Sidebar } from "@/src/components/ui/sidebar";
+import { getMessages } from "next-intl/server";
 
 export default async function Dash({ searchParams }: { searchParams: Promise<{ courseID?: string }>}) {
   // ? cookies stuff

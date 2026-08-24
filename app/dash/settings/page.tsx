@@ -3,11 +3,28 @@
 import { LightDarkModeToggle } from "@/src/components/ui/lightDarkModeToggle"
 import { Sidebar } from "@/src/components/ui/sidebar"
 
-import { motion } from "motion/react"
 import Cookie from "js-cookie"
 
 function setIsAiFeaturesEnabledUser(input: string) {
   Cookie.set('IsAiFeaturesEnabledUser', input, {expires: 365});
+}
+
+function downloadExportFile() {
+  const gems = Cookie.get("gems")
+  const dataObject = {gems}
+  const jsonString = JSON.stringify(dataObject, null, 2)
+
+  const blob = new Blob([jsonString], {
+    type: "application/json"
+  })
+
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement("a")
+  a.href = url
+  a.download = "fosslingo-export.json"
+  a.click()
+
+  URL.revokeObjectURL(url)
 }
 
 export default function Settings() {
@@ -44,12 +61,18 @@ export default function Settings() {
         </section>
         <section className="flex pl-6 pt-6 gap-4">
           {/* ? Import Data Button */}
-          <button className="cursor-pointer transition duration-300 border-3 rounded-xl hover:text-black hover:bg-green-500 hover:border-green-800">
+          <button 
+            className="cursor-pointer transition duration-300 border-3 rounded-xl hover:text-black hover:bg-green-500 hover:border-green-800"
+            onClick={() => alert("working on it")}
+          >
             <p className="font-bold p-2">Import Data</p>
           </button>
 
           {/* ? Export Data Button */}
-          <button className="cursor-pointer transition duration-300 border-3 rounded-xl hover:text-black hover:bg-red-500 hover:border-red-800">
+          <button 
+            className="cursor-pointer transition duration-300 border-3 rounded-xl hover:text-black hover:bg-red-500 hover:border-red-800"
+            onClick={downloadExportFile}  
+          >
             <p className="font-bold p-2">Export Data</p>
           </button>
         </section>
