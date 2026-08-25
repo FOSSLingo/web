@@ -7,8 +7,6 @@ import { useTranslations } from "next-intl";
 import { Footer } from "@/src/components/ui/footer";
 import { NavBar } from "@/src/components/ui/navbar/homeNavbar";
 
-
-
 export default function License() {
   const t = useTranslations('LicensePage')
   return (

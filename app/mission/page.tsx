@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { Roboto } from 'next/font/google';
 import { useTranslations } from "next-intl";
 
