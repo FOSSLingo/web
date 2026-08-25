@@ -13,8 +13,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation"
 
 import { LessonCard } from "@/src/components/ui/lessonCard";
-import { Sidebar } from "@/src/components/ui/sidebar";
-import { getMessages } from "next-intl/server";
+import { ReactiveBar } from "@/src/components/ui/navbar/reactiveBar";
 
 export default async function Dash({ searchParams }: { searchParams: Promise<{ courseID?: string }>}) {
   // ? cookies stuff
@@ -44,18 +43,18 @@ export default async function Dash({ searchParams }: { searchParams: Promise<{ c
 
   return (
     <div className="flex">
-      <Sidebar highlitedIcon="dash"/> {/* * See?! I turned it into a reuseable component! */}
+      <ReactiveBar highlitedIcon="dash"/> {/* * See?! I turned it into a reuseable component! */}
       <main className="flex-1">
         <div className="relative flex items-center justify-center py-10 lg:py-20 xl:py-20">
           <h1 className="font-bold text-4xl">Learn</h1>
           <div className="absolute right-0 flex items-center pr-7">
-            <div className="flex items-center justify-center bg-pink-300 p-1 rounded-xl">
-              <p className="text-3xl text-black font-bold px-2">{gemsCount}</p>
+            <div className="flex items-center justify-center bg-pink-300 border-4 border-pink-400 p-1 rounded-xl">
+              <p className="text-2xl text-black font-bold px-2">{gemsCount}</p>
               <Image
                 src="/gems.png"
                 alt="Gems"
-                width="50"
-                height="50"
+                width="40"
+                height="40"
                 className="pr-2"
               />
             </div>

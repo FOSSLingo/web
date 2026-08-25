@@ -11,7 +11,7 @@ import {
 import { useTranslations } from "next-intl";
 
 import { Footer } from '@/src/components/ui/footer';
-import { NavBar } from "@/src/components/ui/navbar";
+import { NavBar } from "@/src/components/ui/navbar/homeNavbar";
 
 const iOSDevLink     = "https://github.com/orgs/FOSSLingo/discussions/new?category=ideas&title=I'm willing to work on iOS Client Development!&body=Hello! I am a developer, and I am ready to start working on the iOS Client for FOSSLingo! I have x amount of experience."
 const AndroidDevLink = "https://github.com/orgs/FOSSLingo/discussions/new?category=ideas&title=I'm willing to work on Android Client Development!&body=Hello! I am a developer, and I am ready to start working on the Android Client for FOSSLingo! I have x amount of experience."

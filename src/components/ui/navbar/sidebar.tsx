@@ -21,7 +21,6 @@ interface SidebarProps {
 // ? highlitedIcon only takes the following inputs:
 // ? dash, courses, leaderboard, account, settings.
 
-
 export const Sidebar = ({highlitedIcon}: SidebarProps) => {
   return (
     <div className="flex items-center">

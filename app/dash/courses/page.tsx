@@ -1,5 +1,5 @@
 import { CourseIcon } from "@/src/components/ui/courseIcon";
-import { Sidebar } from "@/src/components/ui/sidebar";
+import { ReactiveBar } from "@/src/components/ui/navbar/reactiveBar";
 
 export default async function Dash() {
   const serverUrl = process.env.NEXT_PUBLIC_BACKEND_URL
@@ -8,7 +8,7 @@ export default async function Dash() {
 
   return (
     <div className="flex">
-      <Sidebar highlitedIcon="courses"/>
+      <ReactiveBar highlitedIcon="courses"/>
       <main className="flex-1">
         <div className="flex flex-row justify-center py-10 lg:py-20 xl:py-20">
           <h1 className="font-bold text-4xl">Courses</h1>

@@ -9,7 +9,7 @@ import { Roboto } from 'next/font/google';
 import { motion } from "motion/react";
 
 import { Footer } from "@/src/components/ui/footer"
-import { NavBar } from '@/src/components/ui/navbar';
+import { NavBar } from '@/src/components/ui/navbar/homeNavbar';
 
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from "react";

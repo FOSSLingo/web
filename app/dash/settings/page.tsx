@@ -1,9 +1,10 @@
 "use client"
 
 import { LightDarkModeToggle } from "@/src/components/ui/lightDarkModeToggle"
-import { Sidebar } from "@/src/components/ui/sidebar"
+import { ReactiveBar } from "@/src/components/ui/navbar/reactiveBar"
 
 import Cookie from "js-cookie"
+import { useRef } from "react"
 
 function setIsAiFeaturesEnabledUser(input: string) {
   Cookie.set('IsAiFeaturesEnabledUser', input, {expires: 365});
@@ -27,11 +28,32 @@ function downloadExportFile() {
   URL.revokeObjectURL(url)
 }
 
+function importExportFile(file: File) {
+  file.text().then((text) => {
+    try {
+      const data = JSON.parse(text)
+      console.log(data)
+      if (data.gems !== undefined) {
+        Cookie.set("gems", data.gems, { expires: 365 });
+      }
+
+      alert("Data imported successfully!");
+    } catch {
+      alert("Invalid export file.");
+    }
+  })
+}
+
 export default function Settings() {
   const userSetting = Cookie.get("IsAiFeaturesEnabledUser");
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  function handleImportClick() {
+    fileInputRef.current?.click();
+  }
   return (
     <div className="flex">
-      <Sidebar highlitedIcon="settings"/>
+      <ReactiveBar highlitedIcon="settings"/>
       <main className="flex-1">
         <div className="flex flex-row justify-center py-10 lg:py-20 xl:py-20">
           <h1 className="font-bold text-4xl">Settings</h1>
@@ -57,13 +79,27 @@ export default function Settings() {
               <option value="server">Let Server decide</option>
             </select>
           </div>
-
         </section>
         <section className="flex pl-6 pt-6 gap-4">
           {/* ? Import Data Button */}
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept=".json,application/json"
+            className="hidden"
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+
+              if (file) {
+                importExportFile(file);
+              }
+
+              e.target.value = "";
+            }}
+          />
           <button 
             className="cursor-pointer transition duration-300 border-3 rounded-xl hover:text-black hover:bg-green-500 hover:border-green-800"
-            onClick={() => alert("working on it")}
+            onClick={handleImportClick}
           >
             <p className="font-bold p-2">Import Data</p>
           </button>
