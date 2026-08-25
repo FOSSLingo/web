@@ -5,19 +5,19 @@ import { useTranslations } from "next-intl";
 import { Footer } from "@/src/components/ui/footer";
 import { NavBar } from "@/src/components/ui/navbar/homeNavbar";
 
-export default function License() {
+export default function Courses() {
   const t = useTranslations("CoursesPage")
   return (
     <>
       <NavBar/>
       <main>
-        <section className="flex min-h-[10vh] sm:min-h-[40vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center px-6 text-center">
+        <section className="flex min-h-[20vh] sm:min-h-[20vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center px-6 text-center">
           <h1 className="max-w-4xl text-4xl font-bold md:text-5xl lg:text-6xl">
             {t("title")}
           </h1>
         </section>
         <hr className='border-neutral-800'/>
-        <section className="flex min-h-[10vh] sm:min-h-[40vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center p-6">
+        <section className="flex min-h-[20vh] sm:min-h-[20vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center p-6">
           <div className='text-center'>
             <p className="max-w-2xl text-lg md:text-xl">
               {t.rich("notice", {
@@ -27,7 +27,7 @@ export default function License() {
           </div>
         </section>
         <hr className="border-neutral-800"/>
-        <section className="flex min-h-[10vh] sm:min-h-[40vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center p-6">
+        <section className="flex min-h-[20vh] sm:min-h-[20vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center p-6">
           <div className='text-center'>
             <h2 className="text-2xl">{t("explanationTitle")}</h2>
             <p className="max-w-2xl text-lg md:text-xl">

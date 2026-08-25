@@ -25,7 +25,7 @@ export default function Apps() {
     <>
       <NavBar/>
       <main>
-        <section className="flex min-h-[10vh] sm:min-h-[40vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center px-6 text-center">
+        <section className="flex min-h-[20vh] sm:min-h-[20vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center px-6 text-center">
           <h1 className="max-w-4xl text-4xl font-bold md:text-5xl lg:text-6xl">
             {t("title")}
           </h1>
