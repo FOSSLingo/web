@@ -3,7 +3,7 @@ import { ReactiveBar } from "@/src/components/ui/navbar/reactiveBar";
 export default function Leaderboard() {
   return (
     <div className="flex min-h-screen">
-      <ReactiveBar highlitedIcon="account"/>
+      <ReactiveBar highlitedIcon="leaderboard"/>
       <main className="flex flex-col flex-1">
         <div className="flex flex-row justify-center py-10 lg:py-20 xl:py-20">
           <h1 className="font-bold text-4xl">Leaderboard</h1>
