@@ -13,7 +13,7 @@ export default function License() {
     <>
       <NavBar/>
       <main>
-        <section className="flex min-h-[10vh] sm:min-h-[40vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center px-6 text-center">
+        <section className="flex min-h-[10vh] sm:min-h-[20vh] md:min-h-[30vh] lg:min-h-[20vh] flex-col items-center justify-center px-6 text-center">
           <h1 className="max-w-4xl text-4xl font-bold md:text-5xl lg:text-6xl">
             {t("title")}
           </h1>
@@ -50,7 +50,7 @@ export default function License() {
           </p>
         </section>
         <hr className='border-neutral-800'/>
-        <section className="flex sm:min-h-[30vh] md:min-h-[20vh] lg:min-h-[10vh] xl:min-h-[0vh] flex-col items-center justify-center p-6 px-23">
+        <section className="flex sm:min-h-[20vh] md:min-h-[20vh] lg:min-h-[10vh] xl:min-h-[0vh] flex-col items-center justify-center p-6 px-23">
           <p>{t("disclaimer")}&nbsp;
           <Link href="https://choosealicense.com/licenses/cc-by-4.0/">CC BY-SA 4.0</Link>, {t("and")}&nbsp;
           <Link href="https://choosealicense.com/licenses/agpl-3.0/">AGPL-3.0</Link>

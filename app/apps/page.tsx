@@ -30,86 +30,86 @@ export default function Apps() {
             {t("title")}
           </h1>
         </section>
-        <hr className='border-neutral-800'/>
+        <hr className='dark:border-neutral-800'/>
         <section className='flex flex-col items-center justify-center px-6 py-6 text-center gap-6'>
           
-          <div className='w-100 h-50 bg-[#0f0f0f] rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-5">
               <Link href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
                 <SiNextdotjs size={40}/>
               </Link>
             </div>
-            <div className="bg-[#1f1f1f] rounded-[40]">
-              <p className="p-3">
+            <div className="dark:bg-neutral-800 bg-gray-300 rounded-[40]">
+              <p className="p-2">
                 {t("descriptions.NextJS")}
               </p>
             </div>
           </div>
           
-          <div className='w-100 h-50 bg-[#0f0f0f] rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-5">
               <Link href="https://www.apple.com/os/ios/" target="_blank" rel="noopener noreferrer">
                 <SiIos size={40}/>
               </Link>
             </div>
-            <div className="bg-[#1f1f1f] rounded-[40]">
-              <p className="p-4">
+            <div className="dark:bg-neutral-800 bg-gray-300 rounded-[40]">
+              <p className="p-3">
                 {t("descriptions.iOS")}
                 <Link href={iOSDevLink}><strong>&nbsp;{t("here")}.</strong></Link> 
               </p>
             </div>
           </div>
 
-          <div className='w-100 h-50 bg-[#0f0f0f] rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-5">
               <Link href="https://android.com" target="_blank" rel="noopener noreferrer">
                 <SiAndroid size={40}/>
               </Link>
             </div>
-            <div className="bg-[#1f1f1f] rounded-[40]">
-              <p className="p-4">
+            <div className="dark:bg-neutral-800 bg-gray-300 rounded-[40]">
+              <p className="p-3">
                 {t("descriptions.Android")}
                 <Link href={AndroidDevLink}><strong>&nbsp;{t("here")}.</strong></Link> 
               </p>
             </div>
           </div>
 
-          <div className='w-100 h-50 bg-[#0f0f0f] rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-5">
               <Link href="https://www.linux.com/" target="_blank" rel="noopener noreferrer">
                 <SiLinux size={40}/>
               </Link>
             </div>
-            <div className="bg-[#1f1f1f] rounded-[40]">
-              <p className="p-4">
+            <div className="dark:bg-neutral-800 bg-gray-300 rounded-[40]">
+              <p className="p-3">
                 {t("descriptions.Linux")}
                 <Link href={LinuxDevLink}><strong>&nbsp;{t("here")}.</strong></Link> 
               </p>
             </div>
           </div>
 
-          <div className='w-100 h-50 bg-[#0f0f0f] rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-5">
               <Link href="https://www.apple.com/os/macos/" target="_blank" rel="noopener noreferrer">
                 <SiMacos size={40}/>
               </Link>
             </div>
-            <div className="bg-[#1f1f1f] rounded-[40]">
-              <p className="p-4">
+            <div className="dark:bg-neutral-800 bg-gray-300 rounded-[40]">
+              <p className="p-3">
                 {t("descriptions.macOS")}
                 <Link href={MacOSDevLink}><strong>&nbsp;{t("here")}.</strong></Link> 
               </p>
             </div>
           </div>
 
-          <div className='w-100 h-50 bg-[#0f0f0f] rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-3">
               <Link href="https://windows.com/" target="_blank" rel="noopener noreferrer">
                 <p className="text-sm">Windows</p>
               </Link>
             </div>
-            <div className="bg-[#1f1f1f] rounded-[40]">
-              <p className="p-4">
+            <div className="dark:bg-neutral-800 bg-gray-300 rounded-[40]">
+              <p className="p-3">
                 {t("descriptions.Windows")}
                 <Link href={WindowsDevLink}><strong>&nbsp;{t("here")}.</strong></Link> 
               </p>

@@ -104,7 +104,7 @@ export default function MultipleChoice({ data }: any) {
                 className={`${
                   selected === option.text
                     ? "bg-teal-400 text-black border-teal-200"
-                    : "bg-[#e3e3e3] border-[#cccccc] dark:bg-[#0f0f0f] dark:border-[#1f1f1f]"
+                    : "bg-gray-200 border-gray-300 dark:bg-neutral-950 dark:border-neutral-800"
                 } rounded-xl p-3 flex flex-col gap-5 items-center justify-center font-bold border-2`
               } 
               >

@@ -32,7 +32,7 @@ export const Bottombar = ({highlitedIcon}: BottombarProps) => {
             <Link href="/dash">
               <div className={`p-2 rounded-2xl
                   ${highlitedIcon === "dash"
-                    ? 'dark:bg-[#2F2F2F] bg-[#e3e3e3]'
+                    ? 'dark:bg-neutral-800 bg-gray-200'
                     : ""
                   }
                 `}>
@@ -47,7 +47,7 @@ export const Bottombar = ({highlitedIcon}: BottombarProps) => {
             <Link href="/dash/courses">
               <div className={`p-2 rounded-2xl
                   ${highlitedIcon === "courses"
-                    ? 'dark:bg-[#2F2F2F] bg-[#e3e3e3]'
+                    ? 'dark:bg-neutral-800 bg-gray-200'
                     : ""
                   }
                 `}>
@@ -62,7 +62,7 @@ export const Bottombar = ({highlitedIcon}: BottombarProps) => {
             <Link href="/dash/leaderboard">
               <div className={`p-2 rounded-2xl
                   ${highlitedIcon === "leaderboard"
-                    ? 'dark:bg-[#2F2F2F] bg-[#e3e3e3]'
+                    ? 'dark:bg-neutral-800 bg-gray-200'
                     : ""
                   }
                 `}>
@@ -77,7 +77,7 @@ export const Bottombar = ({highlitedIcon}: BottombarProps) => {
             <Link href="/dash/account">
               <div className={`p-2 rounded-2xl
                   ${highlitedIcon === "account"
-                    ? 'dark:bg-[#2F2F2F] bg-[#e3e3e3]'
+                    ? 'dark:bg-neutral-800 bg-gray-200'
                     : ""
                   }
                 `}>
@@ -92,7 +92,7 @@ export const Bottombar = ({highlitedIcon}: BottombarProps) => {
             <Link href="/dash/settings">
               <div className={`p-2 rounded-2xl
                   ${highlitedIcon === "settings"
-                    ? 'dark:bg-[#2F2F2F] bg-[#e3e3e3]'
+                    ? 'dark:bg-neutral-800 bg-gray-200'
                     : ""
                   }
                 `}>

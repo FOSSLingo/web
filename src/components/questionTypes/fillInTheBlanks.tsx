@@ -102,7 +102,7 @@ export default function FillInTheBlanks({ data }: any) {
                 className={`${
                   selected === option
                     ? "bg-teal-400 text-black border-teal-200"
-                    : "bg-[#e3e3e3] border-[#cccccc] dark:bg-[#0f0f0f] dark:border-[#1f1f1f]"
+                    : "bg-gray-200 border-gray-300 dark:bg-neutral-950 dark:border-neutral-800"
                 } rounded-xl p-3 border-2`}
               >
                 {option}
@@ -174,8 +174,7 @@ export default function FillInTheBlanks({ data }: any) {
             <div className="flex items-center justify-center w-25 md:w-50 h-20 bg-teal-400 rounded-3xl border-2 border-black" onClick={ () =>
               !selected ? alert("Please select an option and try again") : checkAnswer(selected)
             }>
-              <p className="font-bold text-black hidden sm:block text-xl">Check Answer</p>
-              <p className="font-bold text-black sm:hidden text-4xl">✓</p>
+              <p className="font-bold text-black text-4xl">✓</p>
             </div>
           </div>
         </div>
