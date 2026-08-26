@@ -2,8 +2,11 @@
 
 ## HACKCLUB! This repo depends on other repos!!
 
-https://github.com/FOSSLingo/backend, and<br>
+https://github.com/FOSSLingo/backend,<br> 
+and<br>
 https://github.com/FOSSLingo/resources
+
+You can also find the answers to the Example Course in @ANSWERS.md
 
 Thanks!
 
@@ -14,15 +17,15 @@ FOSSLingo is an alternative to traditional language learning apps, designed to b
 
 ### Screenshots;
 
-See [SCREENSHOTS.md](https://github.com/FOSSLingo/web/blob/main/docs/SCREENSHOTS.md)
+See [@SCREENSHOTS.md](https://github.com/FOSSLingo/web/blob/main/docs/SCREENSHOTS.md)
 
 ### How to use;
 
-Currently, you can visit [this link](https://web-eight-ivory-84.vercel.app/) to demo FOSSLingo. 
+Currently, you can visit [this link](learn.iddu01.me) (learn.iddu01.me) to demo FOSSLingo. 
 
 <!-- Update this next section when courses are added -->
 
-I haven't gotten around to actually adding any language courses, because yeah. So this is currently a tech demo.
+I haven't gotten around to actually adding any language courses, because I have not had any time to find a person willing to volunteer their time to help add a course. Also I want to polish the UI and stuff before courses are added. So this is currently a tech demo.
 
 ### Development;
 
@@ -88,7 +91,7 @@ Open [`http://localhost:3000`](http://localhost:3000) with your web browser to s
 
 ### AI usage;
 
-I will be honest, I tried to not use AI in this project. Some AI was used to connect to the backend though, while some of the "connecting to backend logic" was from sites like [StackOverflow](https://stackoverflow.com) or [Reddit](https://www.reddit.com/) questions lol. All the frontend was done by me though.
+Some AI was used to connect to the backend, while some of the "connecting to backend logic" was from sites like [StackOverflow](https://stackoverflow.com) or [Reddit](https://www.reddit.com/) questions lol. All the frontend was done by me though.
 
 ### Hosting on Vercel;
 > [!IMPORTANT]  
@@ -99,7 +102,7 @@ I will be honest, I tried to not use AI in this project. Some AI was used to con
 
 Since this is a Next app, the best way to host would probably be on Vercel. Click this button to deploy instantly!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFOSSLingo%2Fweb&env=NEXT_PUBLIC_BACKEND_URL&envDescription=Backend%20URL&envLink=https%3A%2F%2Fgithub.com%2FFOSSLingo%2Fbackend%2Fblob%2Fmain%2FREADME.md%23hosting-on-vercel&project-name=fosslingo-web&repository-name=fosslingo-web)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFOSSLingo%2Fweb&env=NEXT_PUBLIC_BACKEND_URL,NEXT_PUBLIC_AI_FEATURES_ENABLED,GEMINI_API_KEY&envDefaults=%7B%22NEXT_PUBLIC_BACKEND_URL%22%3A%22https%3A%2F%2Fbackend.learn.iddu01.me%22%2C%22NEXT_PUBLIC_AI_FEATURES_ENABLED%22%3A%22false%22%7D&envDescription=NEXT_PUBLIC_BACKEND_URL%20should%20be%20set%20to%20a%20FOSSLingo%20backend.%20You%20can%20learn%20how%20to%20set%20one%20up%20at%20https%3A%2F%2Fgithub.com%2FFOSSLingo%2Fbackend%20or%20use%20https%3A%2F%2Fbackend.learn.iddu01.me%20for%20testing.%20%20NEXT_PUBLIC_AI_FEATURES_ENABLED%20should%20be%20set%20to%20true%20or%20false.&envLink=https%3A%2F%2Fgithub.com%2FFOSSLingo%2Fweb%2Fblob%2Fmain%2F.env.example&project-name=fosslingo-frontend&repository-name=fosslingo-frontend)
 
 Or, follow these instructions manually.
 
@@ -108,7 +111,7 @@ Or, follow these instructions manually.
 3. Back on Vercel, Click on "Import Project"
 4. Select Import next to "web"
 5. Under Application Preset, select Next.js
-6. Click "Environment Variables", and add one named `NEXT_PUBLIC_BACKEND_URL` with the value of your [backend](https://github.com/FOSSLingo/backend) URL.
+6. Click "Environment Variables", and add one named `NEXT_PUBLIC_BACKEND_URL` with the value of your [backend](https://github.com/FOSSLingo/backend) URL. Add another Environment variable named `NEXT_PUBLIC_AI_FEATURES_ENABLED`, and set it to true or false. If it is set to true, add another Environment Variable named `GEMINI_API_KEY` and set it to a valid Gemini API key.
 5. Click Deploy, and Deployment should start with the latest Git Commit
 
 ### Self hosting deploy
@@ -119,7 +122,7 @@ If you would like to self host the frontend on your own machine, follow these in
 > We don't cover port forwarding / exposing to the web,<br>
 > but for that, we recommend `cloudflared`!
 
-This guide assumes you have `npm` and `git` installed on a **Linux** system.
+This guide assumes you have `npm` and `git` installed on a **Linux** system. (because Linux is superior)
 
 1. Clone this repo somewhere easy to access:
 
