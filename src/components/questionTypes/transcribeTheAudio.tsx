@@ -9,19 +9,24 @@ import ProgressBar from "../ui/progressBar";
 import { X as Cancel } from "react-feather";
 
 import { IsAiFeaturesEnabled } from "../ai/isAiFeaturesEnabled";
+import { LessonEnding } from "../ui/lessonEnding";
 
 export default function TranscribeTheAudio({ data }: any) {
-  const serverUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [lessonComplete, setLessonComplete] = useState(false)
+  const [correctAnswers, setCorrectAnswers] = useState(0)
+  const [incorrectAnswers, setIncorrectAnswers] = useState(0)
+  const [currentQuestion, setCurrentQuestion] = useState(0)
   const [increment, setIncrement] = useState(0)
   const [indicator, setIndicator] = useState<"neutral" | "correct" | "wrong">("neutral");
   const [input, setinput] = useState("");
   const question = data.file.questions[currentQuestion];
   const progress = ((currentQuestion + 1) / data.file.questions.length) * 100;
 
-  const [explanation, setExplanation] = useState("");
+  const [explanation, setExplanation] = useState("")
   const [loadingExplanation, setLoadingExplanation] = useState(false)
   const [explanationButtonVisible, setExplanationButtonVisible] = useState(false)
+
+  const serverUrl = process.env.NEXT_PUBLIC_BACKEND_URL
 
   async function getExplanation(userAnswer: string) {
     setLoadingExplanation(true)
@@ -56,6 +61,7 @@ export default function TranscribeTheAudio({ data }: any) {
     if (input === question.answer) {
       setIndicator("correct");
       setIncrement(progress)
+      setCorrectAnswers(prev => prev + 1)
       setExplanationButtonVisible(false)
       setExplanation("")
       setTimeout(() => {
@@ -66,12 +72,13 @@ export default function TranscribeTheAudio({ data }: any) {
           setExplanation("")
           setExplanationButtonVisible(false)
         } else {
-          window.history.back();
           setIncrement(progress)
+          setLessonComplete(true)
         }
       }, 1000);
     } else {
       setIndicator("wrong")
+      setIncorrectAnswers(prev => prev + 1);
       setExplanation("")
       setExplanationButtonVisible(true)
     }
@@ -84,7 +91,19 @@ export default function TranscribeTheAudio({ data }: any) {
 
   const setInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setinput(e.target.value);
-  };
+  }
+
+  if (lessonComplete) {
+    return (
+      <LessonEnding 
+        gemsEarned={correctAnswers * 5}
+        incorrectAnswers={incorrectAnswers}
+        correctAnswers={correctAnswers}
+        timeElapsed="0:42"
+        totalQuestions={data.file.questions.length}
+      />
+    )
+  }
 
   return (
     <main className="flex flex-col min-h-screen">

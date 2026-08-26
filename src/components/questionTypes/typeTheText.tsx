@@ -9,8 +9,12 @@ import ProgressBar from "../ui/progressBar";
 import { X as Cancel } from "react-feather";
 
 import { IsAiFeaturesEnabled } from "../ai/isAiFeaturesEnabled";
+import { LessonEnding } from "../ui/lessonEnding";
 
 export default function TypeTheText({ data }: any) {
+  const [lessonComplete, setLessonComplete] = useState(false)
+  const [correctAnswers, setCorrectAnswers] = useState(0)
+  const [incorrectAnswers, setIncorrectAnswers] = useState(0)
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [increment, setIncrement] = useState(0)
   const [indicator, setIndicator] = useState<"neutral" | "correct" | "wrong">("neutral");
@@ -51,27 +55,28 @@ export default function TypeTheText({ data }: any) {
     }
   }
 
-  function checkAnswer(input: string) {
-    if (input === question.answer) {
+  async function checkAnswer(option: string) {
+    if (option === question.answer) {
       setIndicator("correct");
       setIncrement(progress)
+      setCorrectAnswers(prev => prev + 1)
       setExplanationButtonVisible(false)
       setExplanation("")
       setTimeout(() => {
         if (currentQuestion < data.file.questions.length - 1) {
-          setCurrentQuestion(currentQuestion + 1);
-          setinput("");
+          setCurrentQuestion(currentQuestion + 1)
           setIndicator("neutral");
           setExplanation("")
           setExplanationButtonVisible(false)
         } else {
-          window.history.back();
           setIncrement(progress)
+          setLessonComplete(true)
         }
       }, 1000);
 
     } else {
       setIndicator("wrong");
+      setIncorrectAnswers(prev => prev + 1);
       setExplanation("")
       setExplanationButtonVisible(true)
     }
@@ -85,6 +90,18 @@ export default function TypeTheText({ data }: any) {
   const setInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setinput(e.target.value);
   };
+
+  if (lessonComplete) {
+    return (
+      <LessonEnding 
+        gemsEarned={correctAnswers * 5}
+        incorrectAnswers={incorrectAnswers}
+        correctAnswers={correctAnswers}
+        timeElapsed="0:42"
+        totalQuestions={data.file.questions.length}
+      />
+    )
+  }
 
   return (
     <main className="flex flex-col min-h-screen">
