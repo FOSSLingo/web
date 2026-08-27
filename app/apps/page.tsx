@@ -33,7 +33,7 @@ export default function Apps() {
         <hr className='dark:border-neutral-800'/>
         <section className='flex flex-col items-center justify-center px-6 py-6 text-center gap-6'>
           
-          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-900 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-5">
               <Link href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
                 <SiNextdotjs size={40}/>
@@ -46,7 +46,7 @@ export default function Apps() {
             </div>
           </div>
           
-          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-900 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-5">
               <Link href="https://www.apple.com/os/ios/" target="_blank" rel="noopener noreferrer">
                 <SiIos size={40}/>
@@ -60,7 +60,7 @@ export default function Apps() {
             </div>
           </div>
 
-          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-900 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-5">
               <Link href="https://android.com" target="_blank" rel="noopener noreferrer">
                 <SiAndroid size={40}/>
@@ -74,7 +74,7 @@ export default function Apps() {
             </div>
           </div>
 
-          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-900 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-5">
               <Link href="https://www.linux.com/" target="_blank" rel="noopener noreferrer">
                 <SiLinux size={40}/>
@@ -88,7 +88,7 @@ export default function Apps() {
             </div>
           </div>
 
-          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-900 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-5">
               <Link href="https://www.apple.com/os/macos/" target="_blank" rel="noopener noreferrer">
                 <SiMacos size={40}/>
@@ -102,7 +102,7 @@ export default function Apps() {
             </div>
           </div>
 
-          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-950 rounded-[40] items-center flex flex-row pr-5'>
+          <div className='w-100 h-50 border border-2 border-gray-300 bg-gray-200 dark:border-neutral-800 dark:bg-neutral-900 rounded-[40] items-center flex flex-row pr-5'>
             <div className="flex items-center px-3">
               <Link href="https://windows.com/" target="_blank" rel="noopener noreferrer">
                 <p className="text-sm">Windows</p>

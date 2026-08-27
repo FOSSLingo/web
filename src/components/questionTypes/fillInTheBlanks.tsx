@@ -8,6 +8,8 @@ import X from "@/public/x.svg"
 import ProgressBar from "../ui/progressBar";
 import { X as Cancel } from "react-feather";
 
+import Cookie from "js-cookie"
+
 import { IsAiFeaturesEnabled } from "@/src/components/ai/isAiFeaturesEnabled";
 import { LessonEnding } from "../ui/lessonEnding";
 
@@ -71,6 +73,18 @@ export default function FillInTheBlanks({ data }: any) {
           setExplanationButtonVisible(false)
         } else {
           setIncrement(progress)
+
+          const gemsMultiplierLessonsLeft = Number(
+            Cookie.get("gemsMultiplierLessonsLeft") || 0
+          )
+
+          if (gemsMultiplierLessonsLeft > 0) {
+            Cookie.set(
+              "gemsMultiplierLessonsLeft",
+              String(gemsMultiplierLessonsLeft - 1)
+            )
+          }
+
           setLessonComplete(true)
         }
       }, 1000);
@@ -88,10 +102,24 @@ export default function FillInTheBlanks({ data }: any) {
     await getExplanation(selected)
   }
   
+  // ? This code doesnt work. Everybody just point and laugh /j
+  // if (Number(Cookie.get("gemsMultiplierLessonsLeft")) >= 1) {
+  //   const gemsEarned = correctAnswers * 5 * 2
+  // }
+  // else {
+  //   const gemsEarned = correctAnswers * 5
+  // }
+
+  const multiplierExists = Number(Cookie.get("gemsMultiplierLessonsLeft") || 0) > 0  
+
+  const gemsEarned = multiplierExists
+    ? correctAnswers * 5 * 2
+    : correctAnswers * 5
+
   if (lessonComplete) {
     return (
       <LessonEnding 
-        gemsEarned={correctAnswers * 5}
+        gemsEarned={gemsEarned}
         incorrectAnswers={incorrectAnswers}
         correctAnswers={correctAnswers}
         timeElapsed="0:42"
@@ -120,7 +148,7 @@ export default function FillInTheBlanks({ data }: any) {
                 className={`${
                   selected === option
                     ? "bg-teal-400 text-black border-teal-200"
-                    : "bg-gray-200 border-gray-300 dark:bg-neutral-950 dark:border-neutral-800"
+                    : "bg-gray-200 border-gray-300 dark:bg-neutral-900 dark:border-neutral-800"
                 } rounded-xl p-3 border-2`}
               >
                 {option}

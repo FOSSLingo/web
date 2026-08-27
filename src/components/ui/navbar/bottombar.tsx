@@ -19,7 +19,7 @@ interface BottombarProps {
 }
 
 // ? highlitedIcon only takes the following inputs:
-// ? dash, courses, leaderboard, account, settings.
+// ? dash, courses, shop, leaderboard, account, settings.
 
 export const Bottombar = ({highlitedIcon}: BottombarProps) => {
   return (
@@ -56,6 +56,21 @@ export const Bottombar = ({highlitedIcon}: BottombarProps) => {
             </Link>
           </motion.button>
           {/* ? Courses Button (end) */}
+
+          {/* ? Shop Button (start) */}
+          <motion.button whileHover={{ scale: 1.3 }}>
+            <Link href="/dash/shop">
+              <div className={`p-2 rounded-2xl
+                  ${highlitedIcon === "shop"
+                    ? 'dark:bg-neutral-800 bg-gray-200'
+                    : ""
+                  }
+                `}>
+                <FeatherIcons.ShoppingCart className="sm:size-10 md:size-10"/>
+              </div>
+            </Link>
+          </motion.button>
+          {/* ? Shop Button (end) */}
 
           {/* ? Leaderboard Button (start) */}
           <motion.button whileHover={{ scale: 1.3 }}>

@@ -163,7 +163,7 @@ export default function TranscribeTheAudio({ data }: any) {
             </h1>
             {loadingExplanation && (
               <p className="mt-2 max-w-xl text-lg">
-                Gemini is thinking.. 🤔
+                Gemini is thinking..
               </p>
             )}
 
