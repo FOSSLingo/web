@@ -21,12 +21,13 @@ export default function FillInTheBlanks({ data }: any) {
   const [increment, setIncrement] = useState(0)
   const [indicator, setIndicator] = useState<"neutral" | "correct" | "wrong">("neutral");
   const [selected, setSelected] = useState("");
-  const question = data.file.questions[currentQuestion];
-  const progress = ((currentQuestion + 1) / data.file.questions.length) * 100;
 
   const [explanation, setExplanation] = useState("");
   const [loadingExplanation, setLoadingExplanation] = useState(false)
   const [explanationButtonVisible, setExplanationButtonVisible] = useState(false)
+
+  const question = data.file.questions[currentQuestion];
+  const progress = ((currentQuestion + 1) / data.file.questions.length) * 100;
 
   async function getExplanation(userAnswer: string) {
     setLoadingExplanation(true)

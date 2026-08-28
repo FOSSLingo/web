@@ -6,9 +6,20 @@ export default function Account() {
       "Bold of you to assume that I have implemented account functionality.", 
       "Does this app even need an account function? What's the point?", 
       "I'm too tired to add accounts, get me a coffee and I will.",
-      "Sorry, I ran out of Claude credits, accounts are now postponed. /j",
+      "Sorry, I ran out of Claude credits, accounts are now postponed /j",
       "Fork this repo and add accounts yourself!!",
-      "Hashing? What's that? I store credentials in plain JSON."
+      "Hashing? What's that? I store credentials in plain JSON.",
+      "accounts = security risk = no because bad for opsec",
+      "Go learn without an account.",
+      "I can't! I don't know anything about backend! Save me!",
+      "No accounts. I made the project open source for a reason /s",
+      "Hmm. How to add accounts without creating a security risk?",
+      "Accounts will be added at ________ (it's a FOSSLingo question)",
+      "I'm still bored, that's why I'm writing these quotes",
+      "While you wait, try finding as many easter eggs you can in the FOSSLingo code!",
+      "Fun Fact: iddu01 coded FOSSLingo on a Thinkpad T490, aswell on a Dell XPS 8940.",
+      "Fun Fact 2: The Thinkpad runs Fedora, while the XPS runs Windows.",
+      "Anything but adding the account functionality!!"
     ]
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 

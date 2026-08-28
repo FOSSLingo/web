@@ -33,11 +33,23 @@ export default function Shop() {
       <ReactiveBar highlitedIcon="shop"/>
       <main className="flex flex-col flex-1">
         <div className="flex flex-row justify-center py-10 lg:py-20 xl:py-20">
-          <h1 className="font-bold text-4xl">Shop</h1>
+          <div className="flex-col text-center">
+						<h1 className="font-bold text-4xl">Shop</h1>
+						<p>yes, this shop only has gems multipliers (3 cards to demo the grid)</p>
+					</div>
         </div>
         <hr className='border-neutral-800'/>
         <div className="flex justify-center pt-5">
 					<div className="grid grid-cols-2 gap-2">
+						<div 
+							className="bg-green-500 w-fit p-3 rounded-3xl border-4 border-green-800"
+							onClick={() => setIsPopupOpen(true)}
+						>
+							<p className="font-bold text-xl">Gems Multiplier - G$ 1000</p>
+							<p>Multiplies Gems Earned by 2x</p>
+							<p>for 2 lessons</p>
+						</div>
+
 						<div 
 							className="bg-green-500 w-fit p-3 rounded-3xl border-4 border-green-800"
 							onClick={() => setIsPopupOpen(true)}

@@ -19,12 +19,13 @@ export default function MultipleChoice({ data }: any) {
   const [increment, setIncrement] = useState(0)
   const [indicator, setIndicator] = useState<"neutral" | "correct" | "wrong">("neutral");
   const [selected, setSelected] = useState("");
-  const question = data.file.questions[currentQuestion];
-  const progress = ((currentQuestion + 1) / data.file.questions.length) * 100;
 
   const [explanation, setExplanation] = useState("");
   const [loadingExplanation, setLoadingExplanation] = useState(false)
   const [explanationButtonVisible, setExplanationButtonVisible] = useState(false)
+
+  const question = data.file.questions[currentQuestion];
+  const progress = ((currentQuestion + 1) / data.file.questions.length) * 100;
 
   const serverUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
