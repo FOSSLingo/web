@@ -1,15 +1,5 @@
 # FOSSLingo web client
 
-## HACKCLUB! This repo depends on other repos!!
-
-https://github.com/FOSSLingo/backend,<br> 
-and<br>
-https://github.com/FOSSLingo/resources
-
-You can also find the answers to the Example Course in @ANSWERS.md
-
-Thanks!
-
 ---
 
 ### What is FOSSLingo?
